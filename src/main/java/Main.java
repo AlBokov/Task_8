@@ -15,10 +15,10 @@ public class Main {
         System.out.println("Средняя сумма за год = " + average);
 
         int monthMax = service.monthMax(statistics);
-        System.out.println("Месяц с максимальным показателем " + monthMax);
+        System.out.println("Месяцев с максимальным показателем " + monthMax);
 
         int monthMin = service.monthMin(statistics);
-        System.out.println("Месяц с минимальным показателем " + monthMin);
+        System.out.println("Месяцев с минимальным показателем " + monthMin);
 
 
         int numberMonthMin = service.numberMonthsLower(statistics);
