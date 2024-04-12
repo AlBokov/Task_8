@@ -25,11 +25,10 @@ public class Main {
         System.out.println("Количество месяцев с показателем ниже среднего = " + numberMonthMin);
 
 
-
         int numberMonthMax = service.numberMonthsHigher(statistics);
         System.out.println("Количество месяцев с выше среденего = " + numberMonthMax);
 
 
-        }
+    }
 }
 

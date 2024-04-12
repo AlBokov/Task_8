@@ -57,12 +57,11 @@ public class ServiceStatistics {
         for (int i = 0; i < statistics.length; i++) {
             if (statistics[i] < averageIndicator) {
                 numberMonthMin++;
-            } if (statistics[i] > averageIndicator) {
-
             }
         }
         return numberMonthMin;
     }
+
 
     // Находим количество месяцев с показателем выше среднего
     public int numberMonthsHigher(long[] statistics) {
