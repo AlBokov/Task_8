@@ -8,16 +8,16 @@ public class Main {
 
         ServiceStatistics service = new ServiceStatistics();
 
-        int stat = service.sumAllSales(statistics);
+        long stat = service.sumAllSales(statistics);
         System.out.println("Общая сумма за год = " + stat);
 
-        int average = service.averageAmount(statistics);
+        long average = service.averageAmount(statistics);
         System.out.println("Средняя сумма за год = " + average);
 
-        int monthMax = service.monthMax(statistics);
+        long monthMax = service.monthMax(statistics);
         System.out.println("Месяцев с максимальным показателем " + monthMax);
 
-        int monthMin = service.monthMin(statistics);
+        long monthMin = service.monthMin(statistics);
         System.out.println("Месяцев с минимальным показателем " + monthMin);
 
 

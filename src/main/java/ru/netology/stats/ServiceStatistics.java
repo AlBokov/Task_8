@@ -4,7 +4,7 @@ public class ServiceStatistics {
 
 
     // Считаем общую сумму стастистики
-    public int sumAllSales(long[] statistics) {
+    public long sumAllSales(long[] statistics) {
         int totalАmount = 0;
         for (int i = 0; i < statistics.length; i++) {
             totalАmount = (int) (totalАmount + statistics[i]);
@@ -14,9 +14,9 @@ public class ServiceStatistics {
 
 
     // Считаем среднюю сумму по статистике в месяц
-    public int averageAmount(long[] statistics) {
+    public long averageAmount(long[] statistics) {
 
-        int totalАmount = sumAllSales(statistics);
+        long totalАmount = sumAllSales(statistics);
         return totalАmount / (statistics.length);
 
     }
@@ -53,7 +53,7 @@ public class ServiceStatistics {
     // Находим количество месяцев с показателем ниже среднего
     public int numberMonthsLower(long[] statistics) {
         int numberMonthMin = 0;
-        int averageIndicator = averageAmount(statistics);
+        int averageIndicator = (int) averageAmount(statistics);
         for (int i = 0; i < statistics.length; i++) {
             if (statistics[i] < averageIndicator) {
                 numberMonthMin++;
@@ -67,7 +67,7 @@ public class ServiceStatistics {
     // Находим количество месяцев с показателем выше среднего
     public int numberMonthsHigher(long[] statistics) {
         int numberMonthMax = 0;
-        int averageIndicator = averageAmount(statistics);
+        int averageIndicator = (int) averageAmount(statistics);
         for (int i = 0; i < statistics.length; i++) {
             if (statistics[i] > averageIndicator) {
                 numberMonthMax++;

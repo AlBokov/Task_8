@@ -7,15 +7,15 @@ public class ServiceStatisticsTest {
 
     @Test
     void sumAllSales() {
-        int expected = 180;
-        int actual = service.sumAllSales(statistics);
+        long expected = 180;
+        long actual = service.sumAllSales(statistics);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void averageAmount() {
-        int expected = 15;
-        int actual = service.averageAmount(statistics);
+        long expected = 15;
+        long actual = service.averageAmount(statistics);
         Assertions.assertEquals(expected, actual);
     }
 
