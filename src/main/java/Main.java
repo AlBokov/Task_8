@@ -4,7 +4,7 @@ import ru.netology.stats.ServiceStatistics;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        int[] statistics = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] statistics = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         ServiceStatistics service = new ServiceStatistics();
 

@@ -4,17 +4,17 @@ public class ServiceStatistics {
 
 
     // Считаем общую сумму стастистики
-    public int sumAllSales(int[] statistics) {
+    public int sumAllSales(long[] statistics) {
         int totalАmount = 0;
         for (int i = 0; i < statistics.length; i++) {
-            totalАmount = totalАmount + statistics[i];
+            totalАmount = (int) (totalАmount + statistics[i]);
         }
         return totalАmount;
     }
 
 
     // Считаем среднюю сумму по статистике в месяц
-    public int averageAmount(int[] statistics) {
+    public int averageAmount(long[] statistics) {
 
         int totalАmount = sumAllSales(statistics);
         return totalАmount / (statistics.length);
@@ -23,8 +23,8 @@ public class ServiceStatistics {
 
 
     // Находим месяц с максимальным показателем
-    public int monthMax(int[] statistics) {
-        int max = statistics[0];
+    public int monthMax(long[] statistics) {
+        long max = statistics[0];
         int month = 0;
         for (int i = 0; i < statistics.length; i++) {
             if (statistics[i] > max) {
@@ -37,8 +37,8 @@ public class ServiceStatistics {
 
 
     // Находим месяц с минимальным показателем
-    public int monthMin(int[] statistics) {
-        int min = statistics[0];
+    public int monthMin(long[] statistics) {
+        long min = statistics[0];
         int month = 0;
         for (int i = 0; i < statistics.length; i++) {
             if (statistics[i] < min) {
@@ -51,7 +51,7 @@ public class ServiceStatistics {
 
 
     // Находим количество месяцев с показателем ниже среднего
-    public int numberMonthsLower(int[] statistics) {
+    public int numberMonthsLower(long[] statistics) {
         int numberMonthMin = 0;
         int averageIndicator = averageAmount(statistics);
         for (int i = 0; i < statistics.length; i++) {
@@ -65,7 +65,7 @@ public class ServiceStatistics {
     }
 
     // Находим количество месяцев с показателем выше среднего
-    public int numberMonthsHigher(int[] statistics) {
+    public int numberMonthsHigher(long[] statistics) {
         int numberMonthMax = 0;
         int averageIndicator = averageAmount(statistics);
         for (int i = 0; i < statistics.length; i++) {

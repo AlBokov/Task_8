@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 public class ServiceStatisticsTest {
     ServiceStatistics service = new ServiceStatistics();
-    int[] statistics = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    long[] statistics = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
     void sumAllSales() {
@@ -29,8 +29,8 @@ public class ServiceStatisticsTest {
 
     @Test
     void monthMin() {
-        int expected = 9;
-        int actual = service.monthMin(statistics);
+        long expected = 9;
+        long actual = service.monthMin(statistics);
         Assertions.assertEquals(expected, actual);
     }
 
