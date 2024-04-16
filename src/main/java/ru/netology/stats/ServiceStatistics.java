@@ -1,5 +1,6 @@
 package ru.netology.stats;
 
+
 public class ServiceStatistics {
 
 
@@ -53,7 +54,7 @@ public class ServiceStatistics {
     // Находим количество месяцев с показателем ниже среднего
     public int numberMonthsLower(long[] statistics) {
         int numberMonthMin = 0;
-        int averageIndicator = (int) averageAmount(statistics);
+        long averageIndicator = averageAmount(statistics);
         for (int i = 0; i < statistics.length; i++) {
             if (statistics[i] < averageIndicator) {
                 numberMonthMin++;
@@ -66,7 +67,7 @@ public class ServiceStatistics {
     // Находим количество месяцев с показателем выше среднего
     public int numberMonthsHigher(long[] statistics) {
         int numberMonthMax = 0;
-        int averageIndicator = (int) averageAmount(statistics);
+        long averageIndicator = averageAmount(statistics);
         for (int i = 0; i < statistics.length; i++) {
             if (statistics[i] > averageIndicator) {
                 numberMonthMax++;
